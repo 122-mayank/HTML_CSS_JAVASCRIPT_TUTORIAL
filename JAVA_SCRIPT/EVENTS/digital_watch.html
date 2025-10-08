@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body{
+              background-color: black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+          }
+          
+          .clock{
+               height: 40px;
+               width: 180px;
+               border: 2px white solid;
+               background-color: bisque;
+               margin-top: 60px;
+               margin-left: 30px;
+               box-shadow: 0px 10px 3px 2px rgb(165, 165, 96);
+          }
+          .lower{
+              height:4px;
+              background-color: yellow;
+              border-radius: 20px;
+              width:140px;
+              margin-left: 48px;
+              /* box-shadow: 20px 0px 3px 2px yellow; */
+          }
+          .clock p{
+               text-align: center;
+               font-size: 1.6rem;
+               margin-top: 8px;
+          }
+
+          h1 {
+            /* font-size: 60px; */
+            /* font-weight: bold; */
+            background: linear-gradient(to right, blue, yellow, yellowgreen);
+           -webkit-background-clip: text;   /* Chrome, Safari ke liye */
+           -webkit-text-fill-color: transparent;  /* text ko transparent kar deta hai */
+            background-clip: text;   /* Firefox ke liye */
+            margin-top:200px;
+            }
+
+          @media(max-width:1300px){
+              
+              .clock{
+                  margin-top: 50px;
+                  height: 70px;
+                  width: 190px;
+              }
+              .clock p{
+                  font-size: 2.4rem;
+                  margin-top: 12px;
+              }
+              h1{
+                  margin-top: 400px;
+              }
+
+          }
+    </style>
+</head>
+<body>
+
+      <section>
+         <h1>DIGITAL WATCH </h1>
+            <div class="clock">
+                 
+            </div>
+            <div class="lower">
+            </div>
+      </section>
+
+
+     <script>
+         let value = new Date().toLocaleTimeString();
+        //  console.log(value);
+
+        let clock = document.querySelector(".clock");
+        let p = document.createElement('p');
+        p.innerHTML=`<p>${value}</p>`;
+        clock.appendChild(p);
+
+      const clockhandler = ()=>{
+         value = new Date().toLocaleTimeString();
+        p.innerHTML=`<p>${value}</p>`;
+    
+      };
+       
+        setInterval(clockhandler , 1000);
+        
+
+     </script>
+</body>
+</html>

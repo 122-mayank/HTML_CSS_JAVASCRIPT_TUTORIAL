@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/nav.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boldonse&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nata+Sans:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />  <link rel="stylesheet" href="/nav.css">
+    <style>
+         h1{
+             margin-top:20px;
+             text-align: center
+         }
+         form{
+              margin-top: 20px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap:20px;
+              flex-wrap: wrap;
+         }
+        input{
+             height:auto;
+             width:40%;
+             max-width: 400px;
+             min-width: 200px;
+             padding:15px;
+             border: 10px #F5DAA7 solid;
+             border-radius: 20px;
+             font-size: 1.3rem;
+             box-sizing: border-box;
+        }
+
+        #smt:hover{
+             background-color: #662222 ;
+             color: beige;
+        }
+
+        @media (max-width: 425px) {
+        input {
+            width: 90%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <%- include('partials/nav') %>
+
+    <h1>Please Enter Your Details </h1>
+    <form action="/" method="POST">
+              <input type="text" placeholder="Enter the Name" name ="name"/>
+              <input type="text" placeholder="House Price" name = "price"/>
+              <input type="text" placeholder="Contact No" name ="contact"/>
+              <input type="text" placeholder="Location" name ="location"/>
+              <input type="submit" id="smt"/>
+     </form>
+
+
+</body>
+</html>

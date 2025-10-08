@@ -1,0 +1,33 @@
+
+body{
+     font-family: "Montserrat", sans-serif;
+     font-optical-sizing: auto;
+}
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+li{
+      list-style-type:none;
+}
+a{
+    text-decoration: none;
+}
+nav{
+     width:100%;
+     background-color:#F75270;
+     height:100px;
+}
+ul{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     padding: 35px;
+}
+li a {
+     font-size: 1.3rem;
+     font-weight: 600;
+     color:#FDEBD0;
+}

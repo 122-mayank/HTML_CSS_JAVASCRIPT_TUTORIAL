@@ -12,6 +12,9 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
+    "init": "^0.1.2"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.10"
   }
 }

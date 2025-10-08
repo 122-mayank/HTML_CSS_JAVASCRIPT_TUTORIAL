@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>  
+        body{
+             background-color: black;
+        }
+        div{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             gap:80px;
+             margin: 300px auto;
+        }
+        #addBtn , #getBtn , #removeBtn{
+                height:45px;
+                border-radius: 20px;
+                padding:10px;
+                font-size: 1.2rem;
+                
+        }
+
+        #addBtn{
+              background-color: yellow;
+        }
+        #getBtn{
+             background-color:rgb(98, 192, 98);
+        }
+        #removeBtn{
+             background-color: rgb(241, 69, 69);
+        }
+    </style>
+
+</head>
+<body>
+    
+     <div>
+           <button id = "addBtn">Add Data to local Storage</button>
+           <button id = "getBtn">Get Data from local Storage</button>
+           <button id ="removeBtn">Delete Data from local Storage</button>
+     </div>
+    
+     <script>
+           const studentBioData = {
+               firstName : "Vinod",
+               lastName : "Thapa",
+               age : 20,
+               gender : "Male",
+               grade : "A",
+               courses : ["Math" , "Science" ,"English"],
+               address:{
+                 street : "123 Main St",
+                 city : "Cityville",
+                 state:"State",
+                 zipCode:"12345",
+               },
+           };
+
+
+      const addToDoList = () =>{
+               localStorage.setItem('objectData',JSON.stringify(studentBioData));
+      };
+
+      const getToDoList =()=>{
+          const retrieve = JSON.parse(localStorage.getItem('objectData'));
+          console.log("Retreived Data",retrieve);
+          
+      }
+      const removeToDoList = () =>{
+           const remove = localStorage.removeItem('objectData');
+           console.log("Data after deleted: " , remove);
+      }
+
+
+         document.getElementById("addBtn").addEventListener("click",()=>{
+             addToDoList();
+         });
+
+         document.getElementById("getBtn").addEventListener("click",()=>{
+             getToDoList();
+         });
+
+         document.getElementById("removeBtn").addEventListener("click",()=>{
+              removeToDoList();
+         });
+
+     </script>
+
+</body>
+</html>

@@ -6,9 +6,37 @@
     <title>Document</title>
 </head>
 <body>
-    I need a  Closure
+     
 
+ <script>
+          function outerfun(){
+               var c = "I'm from outer";
+               function innerfun(){
+                    console.log(c);
+               }
+               return innerfun;
+          }
 
-    <script src="./closures.js"></script>
+          var fun = outerfun();
+          fun();
+
+         function multiplier(factor){
+               return function(number){
+                 console.log(number , factor);
+                 return number * factor;
+               };
+         }
+
+         const double = multiplier(2);
+         console.log(double(5));
+         
+         //ECMA SCRIPT - 
+         const numbers = [10 , 20 , 30];
+         const[first , second , third] = numbers;
+         
+         console.log(second);
+
+ </script>
+   
 </body>
 </html>

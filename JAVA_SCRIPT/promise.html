@@ -7,5 +7,73 @@
 </head>
 <body>
     <p>hello</p>
+
+   <script>
+          /* const namefun = new Promise((resolve , reject)=>{
+              
+              let value = Math.random() > 0.4;
+
+              if(value){
+                 resolve("Yes , I  am  succesful!!");
+              }
+              else{
+                reject("No , please try again later");
+              }
+
+           }).then((res)=>{
+                console.log("good!!" , res);
+           }).catch((err)=>{
+               console.log( err);
+           }).finally(()=>{
+                console.log("do not woory");
+           })
+*/
+
+
+         const first = new Promise((resolve , reject)=>{
+                  setTimeout(()=>{
+                        resolve("First");
+                  } , 1000)
+         });
+
+         const second = new Promise((resolve , reject)=>{
+                 setTimeout(()=>{
+                     reject("Second");
+                 } , 2000)
+         });
+
+         const third = new Promise((resolve , reject)=>{
+              setTimeout(() => {
+                     resolve("Third");
+              } , 3000)
+         });
+
+        Promise.race([first , second , third])
+        .then((res)=>{
+             console.log(res);
+        })
+        .catch((err)=>{
+             console.log(err);
+        })
+
+         Promise.allSettled([first , second , third])
+        .then((res)=>{
+             console.log(res);
+        })
+        .catch((err)=>{
+             console.log(err);
+        })
+
+
+        Promise.all([first , second , third])
+        .then((res)=>{
+             console.log(res);
+        })
+        .catch((err)=>{
+             console.log(err);
+        })
+         
+   </script>
+
 </body>
 </html>

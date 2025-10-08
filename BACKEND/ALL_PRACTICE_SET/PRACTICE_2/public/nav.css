@@ -1,0 +1,47 @@
+/* Reset and box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body {
+        background-color: #662222;
+        color: beige;
+        font-family: "Nata Sans", sans-serif;
+        font-optical-sizing: auto;
+      }
+
+/* Navbar list */
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: antiquewhite;
+    width: 100%;
+}
+
+/* List items */
+li {
+    padding: 30px 30px;
+    font-size: 1.4rem;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #A3485A;
+    font-weight: 600;
+}
+
+/* Responsive (for small screens) */
+@media (max-width: 531px) {
+    ul {
+        flex-direction: column;   /* Stack items vertically */
+        align-items: center;      /* Center items */
+    }
+    li {
+        padding: 15px;
+    }
+}

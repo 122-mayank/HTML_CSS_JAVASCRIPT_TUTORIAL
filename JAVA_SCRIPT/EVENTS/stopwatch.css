@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #74ebd5, #9face6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #222;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #283593;
+}
+
+.main_container {
+  height: auto;
+  width: 320px;
+  padding: 20px;
+  margin: 20px auto 50px auto;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.text p {
+  font-size: 5rem;
+  color: #c62828;
+  margin-bottom: 20px;
+}
+
+.class_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.grid {
+  height: 45px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #ccc;
+}
+
+.grid:hover {
+  background-color: #e0f7fa;
+  border-color: #26c6da;
+  transform: scale(1.05);
+}
+
+#fourth {
+  font-size: 1rem;
+}
+
+.last_div {
+  height: 45px;
+  width: 100%;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  padding-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #ccc;
+}
+
+.last_div:hover {
+  background-color: #ffebee;
+  border-color: #ef5350;
+  transform: scale(1.05);
+}
+
+p {
+  margin-top: 10px;
+  text-align: center;
+  color: #d32f2f;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .main_container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .text p {
+    font-size: 3.5rem;
+  }
+
+  .grid,
+  .last_div {
+    font-size: 1rem;
+    height: 40px;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+}

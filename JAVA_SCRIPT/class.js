@@ -1,14 +1,13 @@
 
-function sayname(myname){
-console.log("My name is ",myname);
+// function sayname(myname){
+// console.log("My name is ",myname);
 
 
-}
-sayname("mayank");
+// }
+// sayname("mayank");
 
 
-
-
+  
 
 
 
