@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="/nav.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boldonse&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nata+Sans:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>AirBnB</title>
 
     <style>
@@ -23,6 +28,16 @@
         border-radius: 10px;
         padding: 15px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+      form button{
+          padding: 10px;
+          border-radius: 10px;
+          font-size: 1.2rem;
+          border: none;
+      }
+      form button:hover{
+          background-color: #842A3B;
+          color:white;
       }
     </style>
   </head>
@@ -44,8 +59,13 @@
           <p><strong>Price:</strong> ₹<%= home.price %></p>
           <p><strong>Contact:</strong> <%= home.contact %></p>
           <p><strong>Location:</strong> <%= home.location %></p>
+          <form action="/homes_details" method="POST" >
+           <button type="submit">Home Details</button>
+          </form>
         </div>
       <% }) %>
+
     <% } %>
+
   </body>
 </html>

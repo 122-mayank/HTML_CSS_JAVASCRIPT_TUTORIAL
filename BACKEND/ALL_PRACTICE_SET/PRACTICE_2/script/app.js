@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Import routers and array
 const userRouter = require('../routes/userRouter');
-const {hostRouter} = require('../routes/hostRouter');
+const hostRouter = require('../routes/hostRouter');
 
 // View engine
 app.set('view engine', 'ejs');
@@ -19,6 +19,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 // Mount routers
 app.use( userRouter);
 app.use( hostRouter);
+
 
 const PORT = 3000;
 app.listen(PORT, () => {

@@ -1,7 +1,7 @@
 {
   "name": "script",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
@@ -14,9 +14,7 @@
     "nodemon": "^3.1.10"
   },
   "dependencies": {
-    "connect-livereload": "^0.6.1",
     "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "livereload": "^0.10.3"
+    "express": "^5.1.0"
   }
 }

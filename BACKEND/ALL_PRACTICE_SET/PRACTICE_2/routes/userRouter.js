@@ -1,11 +1,11 @@
 const express = require('express');
 const userRouter = express.Router();
 
-const { registeredhomes } = require('./hostRouter');
+// const { registeredhomes } = require('../controllers/homes');
+const homeControllers = require('../controllers/homes');
 
 // Home page showing registered homes
-userRouter.get('/', (req, res) => {
-  res.render('airbnb_home', { users: registeredhomes });
-});
+userRouter.get('/',homeControllers.getaddHome);
+userRouter.post('/homes_details',homeControllers.homesDetails);
 
 module.exports = userRouter;
