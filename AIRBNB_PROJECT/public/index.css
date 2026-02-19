@@ -51,21 +51,16 @@ a{
 }
 
 /* Tablet Screen */
-@media(min-width:702px ){
+@media(min-width:701px ) and (max-width:1144px){
 
 
     nav{
         display: flex;
         justify-content: space-between;
     }
-    h1{
-        width:30%;
-    }
-
      ul{
-        width:60%;
+        width:70%;
         gap:0px;
-        /* justify-content: space-around; */
      }
      a{
         padding: 7px;
